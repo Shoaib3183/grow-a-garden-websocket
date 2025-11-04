@@ -1,0 +1,27 @@
+name: Grow a Garden Listener
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */6 * * *"  # ہر 6 گھنٹے بعد run ہوگا
+
+jobs:
+  run-listener:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run WebSocket listener
+        run: |
+          python websocket_listener.py
