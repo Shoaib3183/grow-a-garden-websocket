@@ -23,7 +23,7 @@ ORANGE = "\033[38;5;208m"
 RESET = "\033[0m"
 
 # Replace with your actual Discord user ID
-DISCORD_USER_ID = "YOUR_DISCORD_ID_HERE"
+DISCORD_USER_ID = "1119180903520948305"
 
 # Load keywords from keywords.txt (one per line, case-insensitive)
 def load_keywords():
